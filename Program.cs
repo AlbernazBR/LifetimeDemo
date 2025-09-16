@@ -1,3 +1,4 @@
+using LifetimeDemo;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,7 +29,7 @@ app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Lifetime Demo API v1");
-    c.RoutePrefix = "swagger"; // URL: /swagger
+    c.RoutePrefix = string.Empty; // URL: /swagger
 });
 
 app.MapControllers();
